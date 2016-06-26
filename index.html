@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html ng-app= "myApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class = "container" ng-controller = "AppCtrl">
+		<h1> REST Web Service By {{name}}</h1>
+		<table class = "table">
+			<thead>
+				<tr>
+					<th>searchContent</th>
+					<th>limit</th>
+					<th>Operation</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input class = "form-control" ng-model="searchContent"></td>
+					<td><input class = "form-control" ng-model="limit"></td>
+					<td> <button class = "btn btn-primary" ng-click = "searchOut()">Search</button></td> 
+				</tr>	
+				<tr ng-repeat = "p in returnData | orderBy:'-count'">
+					<td>{{p.fullname}}</td>
+					<td>{{p.count}}</td>
+				</tr>		
+			</tbody>
+		</table>
+	</div>
+	
+<script src = "http://code.angularjs.org/angular-1.0.1.min.js"></script>
+<!-- <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script> -->
+<script src = "controllers/controller.js"></script>
+</body>
+</html>
