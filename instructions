@@ -13,8 +13,8 @@ You can use "index.html" and "controller.js"  to test it, or directly send a get
 
 The service accepts the following parameters:
 
-Name	  Required	Default	                    Description
-search	yes	      -	                          patent search text
+Name	  Required    Default	                  Description
+search	  yes	      -	                          patent search text
 limit	  no	      1	                          number of patents considered (min:1, max:5)
 	 		
 Request example:
