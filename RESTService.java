@@ -11,9 +11,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
- 
-//import org.springframework.web.bind.annotation.RequestParam;
-
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
@@ -26,7 +23,7 @@ import org.json.simple.parser.ParseException;
 @Path("/")
 public class RESTService {
   
-	//1 building     2  consuming  3 combine together
+	//1 building  2 consuming   3 combine together
 	@GET
 	@Path("/palindromes") 
 	@Produces(MediaType.APPLICATION_JSON) 
@@ -163,7 +160,6 @@ public class RESTService {
 		}
 		return innovatorsNames;
 	}
-	
 	
 	long getPalindromCount(String str){//calculate the count from a give name
 		if (str == null || str.length() == 0){
